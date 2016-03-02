@@ -1,0 +1,16 @@
+.profile {
+  // Desktop
+  @media (min-width: 900px) {
+    @include calcProfileSize(340px, 40px, 8px);
+  }
+
+  // Tablet
+  @media (min-width: 670px) and (max-width: 901px) {
+    @include calcProfileSize(400px, 40px, 8px);
+  }
+
+  // Mobile
+  @media (max-width: 670px) {
+    @include calcProfileSize(250px, 30px, 8px);
+  }
+}

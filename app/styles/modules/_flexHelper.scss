@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+.flexRowCenter {
+  justify-content: center;
+}
+
+.flexRowSpace {
+  justify-content: space-around;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
