@@ -135,7 +135,7 @@ gulp.task('watch', function() {
 });
 
 // Gulp-Task: deploy
-gulp.task('deploy', ['dist'], function() {
+gulp.task('deploy', function() {
   var remotePath = '/';
   var conn = ftp.create({
     host: 'themihel.me',
