@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "themihel <helfenstein.mischa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themihel/themihel.me"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
