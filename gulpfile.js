@@ -138,7 +138,7 @@ gulp.task('watch', function() {
 gulp.task('deploy', function() {
   var remotePath = '/';
   var conn = ftp.create({
-    host: 'themihel.me',
+    host: 'server161.web-hosting.com',
     user: args.user,
     password: args.password,
     log: gutil.log
