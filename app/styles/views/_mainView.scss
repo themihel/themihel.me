@@ -15,27 +15,6 @@
     }
   }
 
-  .social {
-    margin-top: 30px;
-    color: $color-primary-highlight;
-    font-size: 25px;
-    text-align: center;
-    font-weight: $font-weight-light;
-
-    a {
-      color: $color-primary-highlight;
-      text-decoration: none;
-      padding: 7px;
-      border-radius: 10px;
-      transition: all .3s ease-in;
-
-      &:hover, &:active, &:focus {
-        background-color: $color-primary-highlight;
-        color: white;
-      }
-    }
-  }
-
   .project {
     margin-top: 70px;
   }
