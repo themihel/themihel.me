@@ -6,15 +6,17 @@
 
 // import mixins
 @import "mixins/normalizeBoxSize";
-@import "mixins/calcProfileSize";
+@import "mixins/calcHeaderImageSize";
 
 // import core
 @import "core/core";
 
 // modules
 @import "modules/flexHelper";
-@import "modules/profile";
+@import "modules/headerImage";
 @import "modules/project";
+@import "modules/links";
+@import "modules/title";
 
 // import views
 @import "views/mainView";

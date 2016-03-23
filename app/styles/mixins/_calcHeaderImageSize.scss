@@ -1,5 +1,5 @@
 // calc size of profile picture
-@mixin calcProfileSize($profile-size, $profile-pciture-padding, $profile-border-size) {
+@mixin calcHeaderImageSize($profile-size, $profile-pciture-padding, $profile-border-size) {
   width: $profile-size;
   height: $profile-size;
   border-radius: $profile-size * 2;
