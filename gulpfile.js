@@ -89,6 +89,13 @@ gulp.task('html', function() {
     .pipe(size({title: 'html'}));
 });
 
+// Gulp-Task: json
+gulp.task('json', function() {
+  return gulp.src('app/**/*.json')
+    .pipe(gulp.dest('dist/'))
+    .pipe(size({title: 'json'}));
+});
+
 // Gulp-Task: bower_components
 gulp.task('bower', function() {
   return gulp.src('bower_components/**/*')
@@ -153,4 +160,4 @@ gulp.task('deploy', function() {
 gulp.task('default', ['styles', 'lint', 'scripts']);
 
 // Gulp-Task: preserve
-gulp.task('dist', ['html', 'styles', 'lint', 'scripts', 'images', 'bower']);
+gulp.task('dist', ['html', 'json', 'styles', 'lint', 'scripts', 'images', 'bower']);
