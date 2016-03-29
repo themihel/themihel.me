@@ -47,7 +47,7 @@ gulp.task('styles', function() {
 });
 
 // Gulp-Task: scripts
-gulp.task('scripts',function() {
+gulp.task('scripts', ['lint'], function() {
   return gulp.src([
 		'app/scripts/**/*.js'
 	])
