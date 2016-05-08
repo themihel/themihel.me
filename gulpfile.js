@@ -13,7 +13,6 @@ var eslint = require('gulp-eslint');
 var sourcemaps = require('gulp-sourcemaps');
 var header = require('gulp-header');
 var browserSync = require('browser-sync');
-var ftp = require('vinyl-ftp');
 var gutil = require('gulp-util');
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
@@ -139,21 +138,6 @@ gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 gulp.task('watch', function() {
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['lint', 'scripts']);
-});
-
-// Gulp-Task: deploy
-gulp.task('deploy', function() {
-  var remotePath = '/';
-  var conn = ftp.create({
-    host: 'server161.web-hosting.com',
-    user: args.user,
-    password: args.password,
-    log: gutil.log
-  });
-
-  gulp.src(['./dist/**/*.*'])
-    .pipe(conn.newer(remotePath))
-    .pipe(conn.dest(remotePath));
 });
 
 // Gulp-Task: default
