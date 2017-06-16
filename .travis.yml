@@ -1,12 +1,13 @@
 language: node_js
-branches:
-  only:
-    - master
 node_js:
-  - "4.1"
+  - "stable"
 install:
   - npm install
 script:
   - gulp dist
-after_success:
-  - surge --project ./dist --domain themihel.me
+deploy:
+  on: master
+  skip_cleanup: true
+  provider: surge
+  project: dist/
+  domain: themihel.me
