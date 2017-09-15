@@ -1,0 +1,61 @@
+.profileLinks {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  @media(min-width: $screen-md-min) {
+    right: 40px;
+    top: 40px;
+  }
+
+  img {
+    width: 50px;
+    margin-right: 10px;
+  }
+}
+
+.profileText {
+  position: absolute;
+  color: #FFFFFF;
+
+  left: 20px;
+  bottom: 20px;
+
+  @media(min-width: $screen-md-min) {
+    left: 40px;
+    bottom: 40px;
+  }
+}
+
+.profilePhoto {
+  position: absolute;
+  top: calc(50vh - 100px);
+  left: calc(50% - 100px);
+
+  @media(min-width: $screen-md-min) {
+    top: calc(50vh - 200px);
+    left: calc(50% - 150px);
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 10px solid #FFFFFF;
+
+    @media(min-width: $screen-md-min) {
+      width: 300px;
+      height: 300px;
+      border-radius: 300px;
+      border: 20px solid #FFFFFF;
+    }
+
+
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.50);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.50);
+    }
+  }
+}

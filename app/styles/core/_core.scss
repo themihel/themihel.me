@@ -5,9 +5,8 @@
 
 // main
 body {
-	@include normalizeBoxSize();
-	font-family: $font-family;
-  background-color: $color-primary;
+  @include normalizeBoxSize();
+  font-family: $font-family;
   font-weight: $font-weight-regular;
-  padding-bottom: 20px;
+  overflow-x: hidden;
 }
