@@ -4,7 +4,7 @@
 
 .project {
   padding-bottom: 40px;
-  border-bottom: 1px dotted #000000;
+  border-bottom: 1px dotted $color-primary;
   margin-top: 40px;
   margin-bottom: 40px;
 
@@ -41,7 +41,7 @@
   }
 
   .links a {
-    background-color: #000000;
+    background-color: $color-primary;
     color: #FFFFFF;
     padding: 10px;
     border-radius: 5px;

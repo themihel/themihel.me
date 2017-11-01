@@ -16,7 +16,7 @@
 
 .profileText {
   position: absolute;
-  color: #FFFFFF;
+  color: $color-primary-highlight-text;
 
   left: 20px;
   bottom: 20px;
@@ -41,13 +41,13 @@
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    border: 10px solid #FFFFFF;
+    border: 10px solid $color-primary-highlight-text;
 
     @media(min-width: $screen-md-min) {
       width: 300px;
       height: 300px;
       border-radius: 300px;
-      border: 20px solid #FFFFFF;
+      border: 20px solid $color-primary-highlight-text;
     }
 
 
