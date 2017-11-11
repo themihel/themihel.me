@@ -110,7 +110,9 @@ gulp.task('critical', function() {
         width: 2560,
         height: 1600,
         minify: true,
-        extract: true
+        extract: true,
+        ignore: ['@font-face'],
+        css: ['dist/styles/app.css']
     });
 });
 
