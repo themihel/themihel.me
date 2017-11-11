@@ -4,7 +4,8 @@ node_js:
 install:
   - npm install
 script:
-  - gulp build
+  - gulp dist
+  - gulp critical
 deploy:
   on: master
   skip_cleanup: true
