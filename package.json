@@ -12,7 +12,7 @@
     "url": "https://github.com/themihel/themihel.me"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.23.3",
     "critical": "^1.0.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
