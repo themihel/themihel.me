@@ -22,7 +22,7 @@ var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @author <%= pkg.author %>',
-  ' * @copyright 2018 <themihel> Mischa Helfenstein | all rights reserved',
+  ' * @copyright <%= new Date().getFullYear() %> <themihel> Mischa Helfenstein | all rights reserved',
   ' */',
   ''].join('\n');
 
