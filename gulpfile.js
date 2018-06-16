@@ -13,9 +13,7 @@ var eslint = require('gulp-eslint');
 var sourcemaps = require('gulp-sourcemaps');
 var header = require('gulp-header');
 var browserSync = require('browser-sync');
-var gutil = require('gulp-util');
-var minimist = require('minimist');
-var args = minimist(process.argv.slice(2));
+var critical = require('critical');
 var reload = browserSync.reload;
 
 // Header information
@@ -24,7 +22,7 @@ var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @author <%= pkg.author %>',
-  ' * @copyright 2016 <themihel> Mischa Helfenstein | all rights reserved',
+  ' * @copyright <%= new Date().getFullYear() %> <themihel> Mischa Helfenstein | all rights reserved',
   ' */',
   ''].join('\n');
 
@@ -97,16 +95,32 @@ gulp.task('json', function() {
 
 // Gulp-Task: bower_components
 gulp.task('bower', function() {
-  return gulp.src('bower_components/**/*')
-    .pipe(gulp.dest('dist/bower_components/'))
-    .pipe(size({title: 'bower'}));
+    return gulp.src('bower_components/**/*')
+        .pipe(gulp.dest('dist/bower_components/'))
+        .pipe(size({title: 'bower'}));
+});
+
+// Gulp-Task: critical
+gulp.task('critical', function() {
+    critical.generate({
+        inline: true,
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'index.html',
+        width: 2560,
+        height: 1600,
+        minify: true,
+        extract: true,
+        ignore: ['@font-face'],
+        css: ['dist/styles/app.css']
+    });
 });
 
 // Gulp-Task: clean
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 // Gulp-Task: serve:dist
-gulp.task('serve:dist', ['dist'], function() {
+gulp.task('serve:build', ['build'], function() {
   browserSync({
     server: 'dist'
   });
@@ -145,3 +159,6 @@ gulp.task('default', ['styles', 'lint', 'scripts']);
 
 // Gulp-Task: preserve
 gulp.task('dist', ['html', 'json', 'styles', 'lint', 'scripts', 'images', 'bower']);
+
+// Gulp-Task: build
+gulp.task('build', ['dist', 'critical']);

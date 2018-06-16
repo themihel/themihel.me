@@ -16,14 +16,12 @@
 
 // import mixins
 @import "mixins/normalizeBoxSize";
-@import "mixins/calcHeaderImageSize";
 
 // import core
 @import "core/core";
 @import "core/headings";
 
 // modules
-@import "modules/flexHelper";
 @import "modules/cookieNote";
 @import "modules/profile";
 @import "modules/project";

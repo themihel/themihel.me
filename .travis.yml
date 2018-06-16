@@ -5,6 +5,7 @@ install:
   - npm install
 script:
   - gulp dist
+  - gulp critical
 deploy:
   on: master
   skip_cleanup: true

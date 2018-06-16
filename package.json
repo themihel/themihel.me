@@ -12,23 +12,24 @@
     "url": "https://github.com/themihel/themihel.me"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.23.3",
+    "critical": "^1.0.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-eslint": "^4.0.0",
-    "gulp-header": "^1.2.2",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-size": "^2.0.0",
+    "gulp-header": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.6",
     "gulp-util": "^3.0.7",
     "minimist": "^1.2.0",
-    "surge": "^0.19.0"
+    "surge": "^0.20.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7"
