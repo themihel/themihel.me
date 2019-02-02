@@ -43,8 +43,17 @@ gulp.task('styles', function() {
   .pipe(size({title: 'styles'}));
 });
 
+gulp.task('lint', function() {
+    return gulp.src([
+        'app/scripts/**/*.js'
+    ])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());;
+});
+
 // Gulp-Task: scripts
-gulp.task('scripts', ['lint'], function() {
+gulp.task('scripts', gulp.series('lint'), function() {
   return gulp.src([
 		'app/scripts/**/*.js'
 	])
@@ -56,15 +65,6 @@ gulp.task('scripts', ['lint'], function() {
 	.pipe(header(banner, {pkg: pkg}))
 	.pipe(gulp.dest('dist/scripts/'))
   .pipe(size({title: 'scripts'}));
-});
-
-gulp.task('lint', function() {
-  return gulp.src([
-		'app/scripts/**/*.js'
-	])
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());;
 });
 
 // Gulp-Task: images
@@ -102,7 +102,7 @@ gulp.task('bower', function() {
 
 // Gulp-Task: critical
 gulp.task('critical', function() {
-    critical.generate({
+    return critical.generate({
         inline: true,
         base: 'dist/',
         src: 'index.html',
@@ -119,46 +119,46 @@ gulp.task('critical', function() {
 // Gulp-Task: clean
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-// Gulp-Task: serve:dist
-gulp.task('serve:build', ['build'], function() {
-  browserSync({
-    server: 'dist'
-  });
-
-  gulp.watch(['app/styles/**/*.scss'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
-  gulp.watch(['app/images/**/*'], ['images', reload]);
-  gulp.watch(['app/**/*.html'], ['html', reload]);
-});
-
-// Gulp-Task: serve
-gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
-  browserSync({
-    server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch(['app/styles/**/*.scss'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
-  gulp.watch(['app/images/**/*'], reload);
-  gulp.watch(['app/**/*.html'], reload);
-});
-
 // Gulp-Task: watch
 gulp.task('watch', function() {
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['lint', 'scripts']);
+  gulp.watch('app/styles/**/*.scss', gulp.series('styles'));
+  gulp.watch('app/scripts/**/*.js', gulp.series('lint', 'scripts'));
 });
 
 // Gulp-Task: default
-gulp.task('default', ['styles', 'lint', 'scripts']);
+gulp.task('default', gulp.series('styles', 'lint', 'scripts'));
 
 // Gulp-Task: preserve
-gulp.task('dist', ['html', 'json', 'styles', 'lint', 'scripts', 'images', 'bower']);
+gulp.task('dist', gulp.series('html', 'json', 'styles', 'lint', 'scripts', 'images', 'bower'));
 
 // Gulp-Task: build
-gulp.task('build', ['dist', 'critical']);
+gulp.task('build', gulp.series('dist', 'critical'));
+
+// Gulp-Task: serve
+gulp.task('serve', gulp.series('styles', 'lint', 'scripts'), function() {
+    browserSync({
+        server: {
+            baseDir: ['.tmp', 'app'],
+            routes: {
+                '/bower_components': 'bower_components'
+            }
+        }
+    });
+
+    gulp.watch(['app/styles/**/*.scss'], ['styles', reload]);
+    gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
+    gulp.watch(['app/images/**/*'], reload);
+    gulp.watch(['app/**/*.html'], reload);
+});
+
+// Gulp-Task: serve:dist
+gulp.task('serve:build', gulp.series('build'), function() {
+    browserSync({
+        server: 'dist'
+    });
+
+    gulp.watch(['app/styles/**/*.scss'], gulp.series('styles', reload));
+    gulp.watch(['app/scripts/**/*.js'], gulp.series('lint', 'scripts', reload));
+    gulp.watch(['app/images/**/*'], gulp.series('images', reload));
+    gulp.watch(['app/**/*.html'], gulp.series('html', reload));
+});
