@@ -1,0 +1,54 @@
+{{ partial "header.html" . }}
+
+
+<!-- Index View -->
+<div class="indexView">
+  <div class="profileLinks">
+    <a target="_blank" href="https://github.com/themihel/"><img src="images/icons/github.svg" alt="Github - Profile"></a>
+    <a target="_blank" href="https://twitter.com/themihel"><img src="images/icons/twitter.svg" alt="Twitter - Profile"></a>
+    <a target="_blank" href="https://instagram.com/mischa.helfenstein"><img src="images/icons/instagram.svg" alt="Instagram - Profile"></a>
+    <a href="mailto:helfenstein.mischa@gmail.com"><img src="images/icons/email.svg" alt="Email - Link"></a>
+  </div>
+  <div class="profilePhoto">
+    <img src="images/profile/profilePhoto.jpg" alt="Mischa Helfenstein - Profile Photo">
+  </div>
+  <div class="profileText">
+    <h1>Mischa Helfenstein</h1>
+    <h2>Student | Developer</h2>
+  </div>
+</div>
+
+<div class="container projects">
+
+  <div class="row title">
+    <h3>Own projects</h3>
+  </div>
+
+  {{ range .Data.Pages }}
+    {{ if eq .Type "project"}}
+      <div class="row project">
+        <div class="col-md-6">
+          <div class="screenshot">
+            <img src="images/projects/{{ .Params.FeatureImage }}" alt="{{ .Params.FeatureImageDescription }}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="heading">
+            <h4>{{ .Title }} <small>({{ .Date | dateFormat "2006"}})</small></h4>
+          </div>
+          <div class="description">{{ .Description }}</div>
+          <div class="links">
+            {{ range .Params.links }}{{ . | safeHTML }}{{ end }}
+          </div>
+          <div class="tags">
+            {{ range .Params.tags }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}
