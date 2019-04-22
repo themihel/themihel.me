@@ -9,7 +9,9 @@
   <meta name="description" content="Mischa Helfenstein | Student | Developer">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles/app.css">
+  {{ $options := (dict "targetPath" "styles/style.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+  {{ $style := resources.Get "styles/app.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />

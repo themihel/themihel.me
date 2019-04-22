@@ -7,5 +7,5 @@ FeatureImage: "shackbird.png"
 FeatureImageDescription: "shackbird.de - Screenshot"
 Links: ['<a target="_blank" href="http://shackbird.de">Live Preview</a>',
 '<a target="_blank" href="https://github.com/themihel/template.shackbird.de">Template</a>']
-draft: true
+draft: false
 ---

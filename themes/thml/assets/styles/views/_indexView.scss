@@ -1,0 +1,7 @@
+.indexView {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: $color-primary-highlight-text;
+  background-image: -webkit-linear-gradient(30deg, $color-primary-highlight 50%, $color-primary-highlight-text 50%);
+}
