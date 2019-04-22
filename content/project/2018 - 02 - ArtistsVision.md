@@ -5,6 +5,6 @@ Description: "Artists.Vision is a platform for creatives so they can focus on th
 Tags: ["Custom CMS", "Platform", "Creatives"]
 FeatureImage: "artists-vision.png"
 FeatureImageDescription: "Artists.Vision - Screenshot"
-Links: ['<a target="_blank" href="https://artists.vision">Register now</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://artists.vision">Register now</a>']
 draft: false
 ---

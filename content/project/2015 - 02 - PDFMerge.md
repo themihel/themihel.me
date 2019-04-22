@@ -5,6 +5,6 @@ Description: 'Design concept for an online PDF merging service. Concept is just 
 Tags: ['Design', 'Concept']
 FeatureImage: "pdfmerge.png"
 FeatureImageDescription: "PDF - Merge - Screenshot"
-Links: ['<a target="_blank" href="https://themihel.me/images/mockups/pdf_merge.jpg">Preview</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://themihel.me/images/mockups/pdf_merge.jpg">Preview</a>']
 draft: false
 ---

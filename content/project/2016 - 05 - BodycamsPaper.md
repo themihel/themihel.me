@@ -5,6 +5,6 @@ Description: "What is the current (late 2016) legal situation on bodycam usage o
 Tags: ['Uni', 'Paper', 'Bodycam']
 FeatureImage: "bodycams.png"
 FeatureImageDescription: "Bodycam paper presentation - Screenshot"
-Links: ['<a target="_blank" href="mailto:helfenstein.mischa@gmail.com">Paper (only on request)</a>']
+Links: ['<a target="_blank" rel="noopener" href="mailto:helfenstein.mischa@gmail.com">Paper (only on request)</a>']
 draft: false
 ---

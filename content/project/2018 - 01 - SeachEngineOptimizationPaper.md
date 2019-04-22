@@ -5,7 +5,7 @@ Description: "Scientific paper about different types of search engine optimizati
 Tags: ['Uni', 'Paper', 'SEO']
 FeatureImage: "paper-search-engine-optimization.png"
 FeatureImageDescription: "SEO Paper - Demo image"
-Links: ['<a target="_blank" href="https://drive.google.com/open?id=1f_2qWo8RdL-o0jW52EBCfuP10YXPRHQ4">Paper</a>',
-'<a target="_blank" href="https://drive.google.com/open?id=1uBk-oloI_rjJY58mQk5pnKigGf3fPOPc">Presentation</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://drive.google.com/open?id=1f_2qWo8RdL-o0jW52EBCfuP10YXPRHQ4">Paper</a>',
+'<a target="_blank" rel="noopener" href="https://drive.google.com/open?id=1uBk-oloI_rjJY58mQk5pnKigGf3fPOPc">Presentation</a>']
 draft: false
 ---

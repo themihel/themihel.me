@@ -5,6 +5,6 @@ Description: "First project playing around with Sketch in early 2015. Design con
 Tags: ["Design", "Concept", "Sketch"]
 FeatureImage: "worktimer.png"
 FeatureImageDescription: "Worktimer - Sceenshot"
-Links: ['<a target="_blank" href="https://themihel.me/images/mockups/worktimer.jpg">Preview</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://themihel.me/images/mockups/worktimer.jpg">Preview</a>']
 draft: false
 ---

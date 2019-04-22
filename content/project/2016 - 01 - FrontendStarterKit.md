@@ -5,6 +5,6 @@ Description: "Lightweight starter kit for frontend and website projects using la
 Tags: ['Starter Kit', 'Open Source', 'Frontend']
 FeatureImage: "frontend-starter-kit.png"
 FeatureImageDescription: "Frontend-starter-kit - Screenshot"
-Links: ['<a target="_blank" href="https://github.com/themihel/frontend-starter-kit">Github</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://github.com/themihel/frontend-starter-kit">Github</a>']
 draft: false
 ---

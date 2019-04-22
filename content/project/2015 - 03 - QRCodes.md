@@ -5,6 +5,6 @@ Description: 'Responsive service for generating QR - Codes in different sizes. P
 Tags: ['QR Codes', 'API']
 FeatureImage: "qrcode.png"
 FeatureImageDescription: "qr.themihel.me - Screenshot"
-Links: ['<a target="_blank" href="https://qr.themihel.me/">QR - Code</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://qr.themihel.me/">QR - Code</a>']
 draft: false
 ---
