@@ -5,6 +5,7 @@ Description: "Easy open source API - Documentation system. Providing a simple JS
 Tags: ['API', 'Documentation', 'Open Source']
 FeatureImage: "apiweasel.png"
 FeatureImageDescription: "APIWeasel - Screenshot"
-Links: ['<a target="_blank" href="https://github.com/themihel/APIWeasel">Github</a>', '<a target="_blank" href="https://apiweasel.themihel.me/">Demo</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://github.com/themihel/APIWeasel">Github</a>',
+'<a target="_blank" rel="noopener" href="https://apiweasel.themihel.me/">Demo</a>']
 draft: false
 ---

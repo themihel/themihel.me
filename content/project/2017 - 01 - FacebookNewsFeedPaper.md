@@ -5,7 +5,7 @@ Description: "Scientific paper about algorithm accountability on “The story se
 Tags: ['Uni', 'Paper', 'Facebook']
 FeatureImage: "paper-facebook.png"
 FeatureImageDescription: "Facebook Paper - Presentation image"
-Links: ['<a target="_blank" href="https://drive.google.com/open?id=0B-d0qJ4ZlMD9QjM0OHh0MXJMUFk">Paper</a>',
-'<a target="_blank" href="https://drive.google.com/open?id=0B-d0qJ4ZlMD9TVkzNHdNS1FBMmM">Presentation</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://drive.google.com/open?id=0B-d0qJ4ZlMD9QjM0OHh0MXJMUFk">Paper</a>',
+'<a target="_blank" rel="noopener" href="https://drive.google.com/open?id=0B-d0qJ4ZlMD9TVkzNHdNS1FBMmM">Presentation</a>']
 draft: false
 ---

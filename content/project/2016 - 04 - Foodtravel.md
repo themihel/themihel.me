@@ -5,6 +5,6 @@ Description: "Design concept / prototype for an app discovering local, nearby re
 Tags: ['Design', 'Concept', 'App']
 FeatureImage: "foodtravel.png"
 FeatureImageDescription: "Foodtravel - Screenshot"
-Links: ['<a href="https://www.behance.net/gallery/35127337/Adobe-XD-Travel-App-Foodtravel">Behance project</a>']
+Links: ['<a target="_blank" rel="noopener" href="https://www.behance.net/gallery/35127337/Adobe-XD-Travel-App-Foodtravel">Behance project</a>']
 draft: false
 ---

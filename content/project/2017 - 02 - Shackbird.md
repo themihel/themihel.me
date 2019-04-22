@@ -5,7 +5,7 @@ Description: "Responsive website for my friends from Shackbird. With its own, cu
 Tags: ['Custom CMS', 'Template', 'Band Website']
 FeatureImage: "shackbird.png"
 FeatureImageDescription: "shackbird.de - Screenshot"
-Links: ['<a target="_blank" href="http://shackbird.de">Live Preview</a>',
-'<a target="_blank" href="https://github.com/themihel/template.shackbird.de">Template</a>']
+Links: ['<a target="_blank" rel="noopener" href="http://shackbird.de">Live Preview</a>',
+'<a target="_blank" rel="noopener" href="https://github.com/themihel/template.shackbird.de">Template</a>']
 draft: false
 ---

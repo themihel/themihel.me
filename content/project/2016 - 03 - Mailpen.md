@@ -5,9 +5,9 @@ Description: "Final graduation project of my apprenticeship in software developm
 Tags: ['Graduation project', 'Design', 'Concept', 'Implementation', 'API']
 FeatureImage: "mailpen.png"
 FeatureImageDescription: "Mailpen - Screenshot"
-Links: ['<a target="_blank" href="http://mailpen.de/#/demo">Mailpen.de - Demo</a>',
-'<a target="_blank" href="https://slides.themihel.me/mailpen/">Presentation</a>',
-'<a target="_blank" href="http://docs.mailpen.de/ ">API</a>',
-'<a target="_blank" href="https://files.themihel.me/projects/mailpen/Sketchfile-Mailpen">Sketchfile</a>']
+Links: ['<a target="_blank" rel="noopener" href="http://mailpen.de/#/demo">Mailpen.de - Demo</a>',
+'<a target="_blank" rel="noopener" href="https://slides.themihel.me/mailpen/">Presentation</a>',
+'<a target="_blank" rel="noopener" href="http://docs.mailpen.de/ ">API</a>',
+'<a target="_blank" rel="noopener" href="https://files.themihel.me/projects/mailpen/Sketchfile-Mailpen">Sketchfile</a>']
 draft: false
 ---
