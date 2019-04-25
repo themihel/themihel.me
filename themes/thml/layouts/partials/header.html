@@ -10,7 +10,7 @@
 
   <!-- Styles -->
   {{ $options := (dict "targetPath" "styles/style.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
-  {{ $style := resources.Get "styles/app.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
+  {{ $style := resources.Get "styles/app.scss" | resources.ToCSS $options | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <!-- favicon -->
