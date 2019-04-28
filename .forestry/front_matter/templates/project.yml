@@ -15,11 +15,11 @@ fields:
   name: Tags
   label: Tags
 - type: file
-  name: FeatureImage
-  label: FeatureImage
+  name: featureimage
+  label: Feature - Image
 - type: text
   name: FeatureImageDescription
-  label: FeatureImageDescription
+  label: Feature - Image Description
 - type: list
   name: Links
   label: Links
