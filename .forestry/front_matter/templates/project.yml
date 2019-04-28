@@ -1,0 +1,25 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: textarea
+  name: Description
+  label: Description
+- type: list
+  name: Tags
+  label: Tags
+- type: file
+  name: FeatureImage
+  label: FeatureImage
+- type: text
+  name: FeatureImageDescription
+  label: FeatureImageDescription
+- type: list
+  name: Links
+  label: Links
