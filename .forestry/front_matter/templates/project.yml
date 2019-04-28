@@ -23,5 +23,3 @@ fields:
 - type: list
   name: Links
   label: Links
-pages:
-- content/project/test-project.md
