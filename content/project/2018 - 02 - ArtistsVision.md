@@ -4,7 +4,7 @@ date: 2018-04-20 00:00:00 +0000
 Description: Artists.Vision is a platform for creatives so they can focus on their
   work. It provides functionalities to publish their art on the internet in many ways
   or channels and manage their own website. The platform is created for all kinds
-  of art in a seperate way, beginning with photography, followed by music and many
+  of art in a separate way, beginning with photography, followed by music and many
   more to provide the best functionality based on the kind of art they're doing.
 Tags:
 - Custom CMS
