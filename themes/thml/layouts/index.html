@@ -36,7 +36,7 @@
           <div class="heading">
             <h4>{{ .Title }} <small>({{ .Date | dateFormat "2006"}})</small></h4>
           </div>
-          <div class="description">{{ .Description }}</div>
+          <div class="description">{{ .Description | safeHTML }}</div>
           <div class="links">
             {{ range .Params.links }}{{ . | safeHTML }}{{ end }}
           </div>
