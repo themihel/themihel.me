@@ -35,15 +35,15 @@
       text-decoration: none;
       font-size: 12px;
 
-      background-color: #9c9a9a;
-      color: white;
+      background-color: $color-tags-background;
+      color: $color-tags-text;
       border-radius: 5px;
     }
   }
 
   .links a {
-    background-color: $color-primary;
-    color: #FFFFFF;
+    background-color: $color-primary-highlight;
+    color: $color-primary-highlight-text;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
