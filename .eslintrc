@@ -6,7 +6,7 @@
     "no-console": 0
   },
   "globals": {
-        "console": true,
-        "document": true
+    "console": true,
+    "document": true
   }
 }
