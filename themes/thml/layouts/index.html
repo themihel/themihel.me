@@ -25,6 +25,7 @@
   </div>
 
   {{ range .Data.Pages }}
+    {{ printf "%#v" . }}
     {{ if eq .Type "project"}}
       <div class="row project">
         <div class="col-md-6">
