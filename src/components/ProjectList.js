@@ -1,33 +1,31 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Project from './Project';
 
 export default function ProjectList() {
-  const projects = [
-    {
-      title: 'abc1',
-      descriptions: 'dsfasf',
-      tags: ['a', 'b', 'c'],
-    },
-    {
-      title: 'abc2',
-      descriptions: 'dsfasf',
-      tags: ['a', 's', 'd'],
-    },
-    {
-      title: 'abc3',
-      descriptions: 'dsfasf',
-      tags: ['a', 'b', 'c'],
-    },
-  ];
+  const { projects } = useStaticQuery(graphql`
+    query {
+      projects: allSanityProject(sort: {fields: date, order: DESC}) {
+        nodes {
+          id
+          name
+          abstract
+          year: date(formatString: "YYYY")
+          tags {
+            id
+            name
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <>
-      <h2>Projects</h2>
-      <div>
-        {projects.map((project) => (
-          <Project key={project.title} project={project} />
-        ))}
-      </div>
+      <h3>Projects</h3>
+      {projects.nodes.map((project) => (
+        <Project key={project.id} project={project} />
+      ))}
     </>
   );
 }
