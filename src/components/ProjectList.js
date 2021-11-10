@@ -1,6 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import styled from 'styled-components';
 import Project from './Project';
+
+const ProjectListStyles = styled.div`
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+`;
 
 export default function ProjectList() {
   const { projects } = useStaticQuery(graphql`
@@ -21,11 +32,11 @@ export default function ProjectList() {
   `);
 
   return (
-    <>
-      <h3>Projects</h3>
+    <ProjectListStyles>
+      <h3>Own Projects</h3>
       {projects.nodes.map((project) => (
-        <Project key={project.id} project={project} />
+        <Project className="project" key={project.id} project={project} />
       ))}
-    </>
+    </ProjectListStyles>
   );
 }
