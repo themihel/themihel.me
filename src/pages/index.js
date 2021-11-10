@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ContentContainer from '../components/ContentContainer';
 import ProfileBanner from '../components/ProfileBanner';
 import ProjectList from '../components/ProjectList';
 import SEO from '../components/SEO';
@@ -8,7 +9,9 @@ export default function IndexPage() {
     <>
       <SEO />
       <ProfileBanner />
-      <ProjectList />
+      <ContentContainer>
+        <ProjectList />
+      </ContentContainer>
     </>
   );
 }

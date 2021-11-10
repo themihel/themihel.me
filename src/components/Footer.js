@@ -1,5 +1,10 @@
 import React from 'react';
+import ContentContainer from './ContentContainer';
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return (
+    <ContentContainer>
+      Heya!
+    </ContentContainer>
+  );
 }

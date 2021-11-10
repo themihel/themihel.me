@@ -4,6 +4,8 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --primary-dark: #000000;
     --primary-light: #FFFFFF;
+    --tags-background: #9C9A9A;
+    --tags-text: #FFFFFF;
   }
 
   html {
