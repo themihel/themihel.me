@@ -22,6 +22,11 @@ export default function ProjectList() {
           name
           abstract
           year: date(formatString: "YYYY")
+          image {
+            asset {
+              gatsbyImageData
+            }
+          }
           tags {
             id
             name

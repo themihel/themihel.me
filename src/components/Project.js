@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 
 const ProjectStyles = styled.div`
@@ -62,7 +63,9 @@ const ProjectStyles = styled.div`
 export default function Project({ project }) {
   return (
     <ProjectStyles>
-      <div>ImageContainer</div>
+      <div>
+        <GatsbyImage image={project.image.asset.gatsbyImageData} />
+      </div>
       <div>
         <h4>
           {project.name}
@@ -75,10 +78,6 @@ export default function Project({ project }) {
         </h4>
         <div className="description">
           {project.abstract}
-        </div>
-        <div className="links">
-          <a href="#">Test</a>
-          <a href="#">Test</a>
         </div>
         <div className="tags">
           {project.tags.map((tag) => (
