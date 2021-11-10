@@ -18,5 +18,14 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Roboto:300,400,400i,700',
+        ],
+        display: 'swap',
+      },
+    },
   ],
 };
