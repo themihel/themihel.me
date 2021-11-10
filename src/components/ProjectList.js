@@ -27,6 +27,10 @@ export default function ProjectList() {
               gatsbyImageData
             }
           }
+          links {
+            title
+            url
+          }
           tags {
             id
             name

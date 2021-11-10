@@ -79,9 +79,14 @@ export default function Project({ project }) {
         <div className="description">
           {project.abstract}
         </div>
+        <div className="links">
+          {project.links.map((link) => (
+            <a key={link.id} href={link.url}>{link.title}</a>
+          ))}
+        </div>
         <div className="tags">
           {project.tags.map((tag) => (
-            <span key={tag.id} className="tag">{tag.name}</span>
+            <span key={tag.name} target="_blank" rel="noopener noreferrer" className="tag">{tag.name}</span>
           ))}
         </div>
       </div>
