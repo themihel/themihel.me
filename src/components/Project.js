@@ -64,7 +64,7 @@ export default function Project({ project }) {
   return (
     <ProjectStyles>
       <div>
-        <GatsbyImage image={project.image.asset.gatsbyImageData} />
+        <GatsbyImage image={project.image.asset.gatsbyImageData} alt={`${project.name} - Screenshot`} />
       </div>
       <div>
         <h4>
@@ -81,12 +81,12 @@ export default function Project({ project }) {
         </div>
         <div className="links">
           {project.links.map((link) => (
-            <a key={link.id} href={link.url}>{link.title}</a>
+            <a key={link._key} href={link.url}>{link.title}</a>
           ))}
         </div>
         <div className="tags">
           {project.tags.map((tag) => (
-            <span key={tag.name} target="_blank" rel="noopener noreferrer" className="tag">{tag.name}</span>
+            <span key={tag.id} target="_blank" rel="noopener noreferrer" className="tag">{tag.name}</span>
           ))}
         </div>
       </div>

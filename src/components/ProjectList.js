@@ -28,6 +28,7 @@ export default function ProjectList() {
             }
           }
           links {
+            _key
             title
             url
           }
@@ -44,7 +45,7 @@ export default function ProjectList() {
     <ProjectListStyles>
       <h3>Own Projects</h3>
       {projects.nodes.map((project) => (
-        <Project className="project" key={project.id} project={project} />
+        <Project key={project.id} className="project" project={project} />
       ))}
     </ProjectListStyles>
   );

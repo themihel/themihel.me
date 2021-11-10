@@ -17,6 +17,7 @@ module.exports = {
       },
     ],
     'jsx-a11y/control-has-associated-label': 0,
+    'no-underscore-dangle': 0,
   },
   plugins: ['html', 'prettier', 'react-hooks'],
 };
