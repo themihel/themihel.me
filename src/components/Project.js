@@ -18,6 +18,7 @@ const ProjectStyles = styled.div`
   .description, .tags, .links {
     font-size: 18px;
     margin-bottom: 25px;
+    line-height: 1.45;
   }
 
   .tags {
@@ -76,6 +77,7 @@ export default function Project({ project }) {
             )
           </small>
         </h4>
+        {project.subtitle && (<h5>{project.subtitle}</h5>)}
         <div className="description">
           {project.abstract}
         </div>

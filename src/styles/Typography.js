@@ -3,7 +3,7 @@ import { device } from '../utils/device';
 
 const Typography = createGlobalStyle`
   body {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
   }
 
@@ -46,11 +46,6 @@ const Typography = createGlobalStyle`
       font-size: 45px;
       margin-bottom: 20px;
     }
-
-    @media ${device.screenMdMin} {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
   }
 
   h4 {
@@ -63,15 +58,16 @@ const Typography = createGlobalStyle`
     }
 
     @media ${device.screenSmMin} {
-      font-size: 30px;
       margin-bottom: 25px;
       margin-top: 0;
     }
+  }
 
-    @media ${device.screenMdMin} {
-      font-size: 30px;
-      margin-bottom: 25px;
-      margin-top: 0;
+  h5 {
+    font-size: 20px;
+
+    @media ${device.screenSmMin} {
+      margin-bottom: 20px;
     }
   }
 `;

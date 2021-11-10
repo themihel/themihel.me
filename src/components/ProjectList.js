@@ -20,6 +20,7 @@ export default function ProjectList() {
         nodes {
           id
           name
+          subtitle
           abstract
           year: date(formatString: "YYYY")
           image {
