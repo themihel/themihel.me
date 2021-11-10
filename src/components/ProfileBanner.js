@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTwitter,
-} from 'react-icons/fa';
+import { graphql, useStaticQuery } from 'gatsby';
+import * as FontAwesome from 'react-icons/fa';
 import { device } from '../utils/device';
 
 const ProfileBannerStyles = styled.div`
@@ -95,24 +94,31 @@ const ProfileBannerStyles = styled.div`
 `;
 
 export default function ProfileBanner() {
+  const { socialLinks } = useStaticQuery(graphql`
+    query {
+      socialLinks: allSanitySocialLinks(filter: {visible: {eq: true}}) {
+        nodes {
+          id
+          name
+          url
+          icon
+        }
+      }
+    }
+  `);
+
   return (
     <ProfileBannerStyles>
       <div className="profileLinks">
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/themihel/">
-          <FaGithub />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mischa-helfenstein/">
-          <FaLinkedin />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/themihel">
-          <FaTwitter />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/mischa.helfenstein">
-          <FaInstagram />
-        </a>
-        <a href="mailto:helfenstein.mischa@gmail.com">
-          <FaEnvelope />
-        </a>
+        {socialLinks.nodes.map((socialLink) => {
+          const DynamicIcon = React.createElement(FontAwesome[socialLink.icon]);
+
+          return (
+            <a key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url}>
+              {DynamicIcon}
+            </a>
+          );
+        })}
       </div>
       <div className="profilePhoto">
         <img src="https://themihel.me/images/profile/profilePhoto.jpg" alt="Mischa Helfenstein" />

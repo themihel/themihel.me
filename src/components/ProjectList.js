@@ -4,17 +4,17 @@ import Project from './Project';
 export default function ProjectList() {
   const projects = [
     {
-      title: 'abc',
+      title: 'abc1',
       descriptions: 'dsfasf',
       tags: ['a', 'b', 'c'],
     },
     {
-      title: 'abc',
+      title: 'abc2',
       descriptions: 'dsfasf',
       tags: ['a', 's', 'd'],
     },
     {
-      title: 'abc',
+      title: 'abc3',
       descriptions: 'dsfasf',
       tags: ['a', 'b', 'c'],
     },
@@ -25,7 +25,7 @@ export default function ProjectList() {
       <h2>Projects</h2>
       <div>
         {projects.map((project) => (
-          <Project project={project} />
+          <Project key={project.title} project={project} />
         ))}
       </div>
     </>
