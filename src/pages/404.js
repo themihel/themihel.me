@@ -1,6 +1,12 @@
 import * as React from 'react';
+import SEO from '../components/SEO';
 
 // markup
 export default function NotFoundPage() {
-  return <p>Not found</p>;
+  return (
+    <>
+      <SEO />
+      <h1>Not found!</h1>
+    </>
+  );
 }
