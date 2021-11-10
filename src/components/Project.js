@@ -16,9 +16,10 @@ const ProjectStyles = styled.div`
   }
 
   .description, .tags, .links {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 25px;
-    line-height: 1.45;
+    line-height: 1.35;
+    text-align: justify;
   }
 
   .tags {
@@ -83,12 +84,12 @@ export default function Project({ project }) {
         </div>
         <div className="links">
           {project.links.map((link) => (
-            <a key={link._key} href={link.url}>{link.title}</a>
+            <a key={link._key} target="_blank" rel="noopener noreferrer" href={link.url}>{link.title}</a>
           ))}
         </div>
         <div className="tags">
           {project.tags.map((tag) => (
-            <span key={tag.id} target="_blank" rel="noopener noreferrer" className="tag">{tag.name}</span>
+            <span key={tag.id} className="tag">{tag.name}</span>
           ))}
         </div>
       </div>
