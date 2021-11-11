@@ -121,7 +121,11 @@ export default function ProfileBanner() {
         })}
       </div>
       <div className="profilePhoto">
-        <img src="/profilePhoto.jpeg" alt="Mischa Helfenstein" />
+        <picture>
+          <source srcSet="/profilePhoto.webp" type="image/webp" />
+          <source srcSet="/profilePhoto.jpeg" type="image/jpeg" />
+          <img src="/profilePhoto.jpeg" alt="Mischa Helfenstein" />
+        </picture>
       </div>
       <div className="profileText">
         <h1>Mischa Helfenstein</h1>
