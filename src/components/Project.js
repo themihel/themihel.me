@@ -16,10 +16,13 @@ const ProjectStyles = styled.div`
     grid-gap: 40px;
   }
 
-  .description, .tags, .links {
+  .abstract, .tags, .links {
     font-size: 16px;
     margin-bottom: 25px;
     line-height: 1.35;
+  }
+
+  .abstract {
     text-align: justify;
   }
 
@@ -80,7 +83,7 @@ export default function Project({ project }) {
           </small>
         </h4>
         {project.subtitle && (<h5>{project.subtitle}</h5>)}
-        <div className="description">
+        <div className="abstract">
           {project.abstract}
         </div>
         <div className="links">
