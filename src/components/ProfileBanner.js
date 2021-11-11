@@ -114,7 +114,7 @@ export default function ProfileBanner() {
           const DynamicIcon = React.createElement(FontAwesome[socialLink.icon]);
 
           return (
-            <a key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url}>
+            <a key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url} aria-label={socialLink.name}>
               {DynamicIcon}
             </a>
           );
