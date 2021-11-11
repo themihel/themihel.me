@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as FontAwesome from 'react-icons/fa';
+import { StaticImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 
 const ProfileBannerStyles = styled.div`
@@ -121,7 +122,7 @@ export default function ProfileBanner() {
         })}
       </div>
       <div className="profilePhoto">
-        <img src="https://themihel.me/images/profile/profilePhoto.jpg" alt="Mischa Helfenstein" />
+        <img src="/profilePhoto.jpeg" alt="Mischa Helfenstein" />
       </div>
       <div className="profileText">
         <h1>Mischa Helfenstein</h1>
