@@ -13,6 +13,7 @@ const ProjectStyles = styled.div`
 
   @media ${device.screenLgMin} {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
   }
 
   .description, .tags, .links {

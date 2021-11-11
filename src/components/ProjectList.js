@@ -7,8 +7,7 @@ const ProjectListStyles = styled.div`
   h3 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     color: #333333;
   }
 `;
