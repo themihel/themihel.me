@@ -1,24 +1,46 @@
 {
   "name": "themihel.me",
-  "version": "2.0.0",
-  "description": "themihel.me Website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "themihel.me",
+  "author": "Mischa Helfenstein",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "themihel <helfenstein.mischa@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/themihel/themihel.me"
-  },
-  "devDependencies": {
-    "critical": "^1.3.4",
-    "gulp": "^4.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.0.0",
-    "gulp-size": "^3.0.0",
-    "gulp-util": "^3.0.7"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "babel-plugin-styled-components": "^1.13.3",
+    "dotenv": "^10.0.0",
+    "gatsby": "^4.1.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^5.1.0",
+    "gatsby-plugin-sharp": "^4.1.2",
+    "gatsby-plugin-styled-components": "^5.1.0",
+    "gatsby-source-sanity": "^7.1.0",
+    "gatsby-transformer-sharp": "^4.1.0",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "prettier": "^2.4.1"
   }
 }
