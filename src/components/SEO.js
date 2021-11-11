@@ -15,7 +15,7 @@ export default function SEO({ children }) {
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="Mischa Helfenstein | Student | Developer"
+        content="Hello, I'm Mischa, a socioinformatics student from Germany. Besides my master studies I work part-time as a software developer."
       />
 
       {children}

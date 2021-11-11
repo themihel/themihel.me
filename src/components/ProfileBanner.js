@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as FontAwesome from 'react-icons/fa';
-import { StaticImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 
 const ProfileBannerStyles = styled.div`
