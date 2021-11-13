@@ -35,6 +35,9 @@ export default function ProjectList() {
           tags {
             id
             name
+            slug {
+              current
+            }
           }
         }
       }

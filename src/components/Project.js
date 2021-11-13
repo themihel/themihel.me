@@ -27,19 +27,16 @@ const ProjectStyles = styled.div`
   }
 
   .tags {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
 
     @media ${device.screenSmMin} {
       margin-top: 50px;
     }
 
-    &:before {
-      content: 'Tags:';
-      margin-right: 5px;
-    }
-
     .tag {
-      margin-right: 5px; 
+      margin: 5px 5px 0 0;
       padding: 5px;
       text-decoration: none;
       font-size: 12px;
@@ -93,7 +90,9 @@ export default function Project({ project }) {
         </div>
         <div className="tags">
           {project.tags.map((tag) => (
-            <span key={tag.id} className="tag">{tag.name}</span>
+            <span key={tag.id} className="tag">
+              {`#${tag.slug.current}`}
+            </span>
           ))}
         </div>
       </div>
