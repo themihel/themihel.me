@@ -4,10 +4,3 @@
  
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
-
-[[plugins]]
-  package = "@sentry/netlify-build-plugin"
-
-  [plugins.inputs]
-    sentryOrg = "themihel"
-    sentryProject = "themihel-me"
