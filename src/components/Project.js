@@ -18,7 +18,7 @@ const ProjectStyles = styled.div`
 
   .abstract, .tags, .links {
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     line-height: 1.35;
   }
 
@@ -29,11 +29,7 @@ const ProjectStyles = styled.div`
   .tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
-
-    @media ${device.screenSmMin} {
-      margin-top: 50px;
-    }
+    margin-top: 25px;
 
     .tag {
       margin: 5px 5px 0 0;
@@ -47,18 +43,23 @@ const ProjectStyles = styled.div`
     }
   }
 
-  .links a {
-    background-color: var(--primary-dark);
-    color: var(--primary-light);
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10px;
-    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.50);
-    transition: box-shadow .3s ease-in-out;
+  .links {
+    display: flex;
+    flex-wrap: wrap;
 
-    &:hover {
-      box-shadow: none;
+    a {
+      background-color: var(--primary-dark);
+      color: var(--primary-light);
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 10px 10px 0 0;
+      box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.50);
+      transition: box-shadow .3s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 `;
