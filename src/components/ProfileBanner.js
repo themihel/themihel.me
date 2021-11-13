@@ -26,21 +26,26 @@ const ProfileBannerStyles = styled.div`
       background-color: var(--primary-dark);
       font-size: 30px;
       margin-right: 10px;
-      vertical-align: middle;
       padding: 10px;
-      border-radius: 10px;
-
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      
       box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.50);
       transition: all .3s ease-in-out;
 
+      border: 1px solid var(--primary-dark);
+      border-radius: 10px;
+
       &:hover {
-        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.50);
+        box-shadow: none;
       }
 
       &:active {
         color: var(--primary-dark);
         background-color: var(--primary-light);
-        box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.50);
+        border-style: dashed;
+        box-shadow: none;
       }
     }  
     

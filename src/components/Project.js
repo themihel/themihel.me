@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
+import Button from './Button';
 
 const ProjectStyles = styled.div`
   padding-bottom: 40px;
@@ -46,21 +47,6 @@ const ProjectStyles = styled.div`
   .links {
     display: flex;
     flex-wrap: wrap;
-
-    a {
-      background-color: var(--primary-dark);
-      color: var(--primary-light);
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin: 10px 10px 0 0;
-      box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.50);
-      transition: box-shadow .3s ease-in-out;
-
-      &:hover {
-        box-shadow: none;
-      }
-    }
   }
 `;
 
@@ -74,11 +60,7 @@ export default function Project({ project }) {
         <h4>
           {project.name}
           {' '}
-          <small>
-            (
-            {project.year}
-            )
-          </small>
+          <small>{`(${project.year})`}</small>
         </h4>
         {project.subtitle && (<h5>{project.subtitle}</h5>)}
         <div className="abstract">
@@ -86,7 +68,7 @@ export default function Project({ project }) {
         </div>
         <div className="links">
           {project.links.map((link) => (
-            <a key={link._key} target="_blank" rel="noopener noreferrer" href={link.url}>{link.title}</a>
+            <Button key={link._key} target="_blank" rel="noopener noreferrer" href={link.url}>{link.title}</Button>
           ))}
         </div>
         <div className="tags">
