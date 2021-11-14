@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
-import * as FontAwesome from 'react-icons/fa';
 import { device } from '../utils/device';
+import Button from './Button';
 
 const ProfileBannerStyles = styled.div`
   height: 100vh;
@@ -115,15 +115,11 @@ export default function ProfileBanner() {
   return (
     <ProfileBannerStyles>
       <div className="profileLinks">
-        {socialLinks.nodes.map((socialLink) => {
-          const DynamicIcon = React.createElement(FontAwesome[socialLink.icon]);
-
-          return (
-            <a key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url} aria-label={socialLink.name}>
-              {DynamicIcon}
-            </a>
-          );
-        })}
+        {socialLinks.nodes.map((socialLink) => (
+          <Button key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url} aria-label={socialLink.name}>
+            {socialLink.name}
+          </Button>
+        ))}
       </div>
       <div className="profilePhoto">
         <picture>
