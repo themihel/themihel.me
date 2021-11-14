@@ -67,8 +67,8 @@ const ProfileBannerStyles = styled.div`
 
   .profilePhoto {
     position: absolute;
-    top: calc(50vh - 100px);
-    left: calc(50% - 100px);
+    top: calc(50vh - 150px);
+    left: calc(50% - 120px);
 
     @media ${device.screenMdMin} {
       top: calc(50vh - 200px);
