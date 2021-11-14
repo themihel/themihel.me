@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     color: var(--primary-dark);
+    overflow-x: hidden;
   }
 
   a {
