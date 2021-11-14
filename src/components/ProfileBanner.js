@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 import Button from './Button';
 
@@ -74,19 +75,16 @@ const ProfileBannerStyles = styled.div`
       left: calc(50% - 150px);
     }
 
-    img {
+    .gatsbyImage {
       width: 200px;
       height: 200px;
-      border-radius: 200px;
-      border: 10px solid var(--primary-light);;
+      border: 20px solid var(--primary-light);
+      border-radius: 100%;
 
       @media ${device.screenMdMin} {
         width: 300px;
         height: 300px;
-        border-radius: 300px;
-        border: 20px solid var(--primary-light);;
       }
-
 
       box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.50);
       transition: all .3s ease-in-out;
@@ -95,11 +93,15 @@ const ProfileBannerStyles = styled.div`
         box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.50);
       }
     }
+
+    img.gatsbyImage {
+      border: none;
+    }
   }
 `;
 
 export default function ProfileBanner() {
-  const { socialLinks } = useStaticQuery(graphql`
+  const { socialLinks, profileImages } = useStaticQuery(graphql`
     query {
       socialLinks: allSanitySocialLinks(filter: {visible: {eq: true}}) {
         nodes {
@@ -108,9 +110,18 @@ export default function ProfileBanner() {
           url
           icon
         }
+      },
+      profileImages: allFile(filter: {name: {eq: "profilePhoto"}}) {
+        nodes {
+          name
+          childImageSharp {
+            gatsbyImageData(width: 300)
+          }
+        }
       }
     }
   `);
+  const profileImage = profileImages.nodes[0];
 
   return (
     <ProfileBannerStyles>
@@ -122,11 +133,11 @@ export default function ProfileBanner() {
         ))}
       </div>
       <div className="profilePhoto">
-        <picture>
-          <source srcSet="/profilePhoto.webp" type="image/webp" />
-          <source srcSet="/profilePhoto.jpeg" type="image/jpeg" />
-          <img src="/profilePhoto.jpeg" alt="Mischa Helfenstein" />
-        </picture>
+        <GatsbyImage
+          className="gatsbyImage"
+          image={profileImage.childImageSharp.gatsbyImageData}
+          alt="Mischa Helfenstein"
+        />
       </div>
       <div className="profileText">
         <h1>Mischa Helfenstein</h1>
