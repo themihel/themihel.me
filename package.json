@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "netlify": "netlify dev"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.3",
@@ -31,6 +32,7 @@
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
     "react": "^17.0.1",
+    "react-cookie-consent": "^6.4.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
