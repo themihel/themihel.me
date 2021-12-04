@@ -49,7 +49,6 @@ export default function Layout({ children }) {
           color: '#000000', fontSize: '13px', background: '#FFFFFF', borderRadius: '5px',
         }}
         expires={150}
-        debug
       >
         This website uses cookies.
       </CookieConsent>
