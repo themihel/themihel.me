@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'normalize.css';
 import { Helmet } from 'react-helmet';
-import CookieConsent, { Cookies } from 'react-cookie-consent';
+import CookieConsent from 'react-cookie-consent';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 
