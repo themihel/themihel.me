@@ -4,13 +4,90 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 import Button from './Button';
+import Logo from '../assets/logo/logo.svg';
 
 const ProfileBannerStyles = styled.div`
   height: 100vh;
   width: 100vw;
 
   background-color: var(--primary-light);
-  background-image: -webkit-linear-gradient(30deg, var(--primary-dark) 50%, var(--primary-light) 50%);
+  background-image: -webkit-linear-gradient(20deg, var(--primary-dark) 50%, var(--primary-light) 50%);
+  background-size: 130% 130%;
+  background-position-x: 30%;
+  animation: degrees 7s 1;
+
+
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    width: 30px;
+    fill: var(--primary-light);
+    transition: all .3s ease-in-out;
+
+    @media ${device.screenMdMin} {
+      width: 40px;
+    }
+
+    &:hover {
+      #top-left {
+        animation: changecolor 3s infinite .2s;
+      }
+
+      #top-middle {
+        animation: changecolor 5s infinite 1s;
+      }
+
+      #top-right {
+        animation: changecolor 1.3s infinite .8s;
+      }
+
+      #middle-left {
+        animation: changecolor 2s infinite .1s;
+      }
+
+      #middle-middle {
+        animation: changecolor 1s infinite .7s;
+      }
+
+      #middle-right {
+        animation: changecolor .8s infinite 2s;
+      }
+
+      #bottom-left {
+        animation: changecolor 1.3s infinite;
+      }
+
+      #bottom-right {
+        animation: changecolor .7s infinite .8s;
+      }
+    }
+  }
+
+  @keyframes changecolor {
+   from {
+     fill: var(--primary-light);
+    }
+   to {
+    fill: var(--primary-dark);
+    }
+  }
+
+  @keyframes degrees {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    70% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 30% 0%;
+    }
+  }
 
   .profileLinks {
     position: absolute;
@@ -21,34 +98,6 @@ const ProfileBannerStyles = styled.div`
       right: 40px;
       top: 40px;
     }
-
-    svg {
-      color: var(--primary-light);
-      background-color: var(--primary-dark);
-      font-size: 30px;
-      margin-right: 10px;
-      padding: 10px;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor: pointer;
-      
-      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.50);
-      transition: all .3s ease-in-out;
-
-      border: 1px solid var(--primary-dark);
-      border-radius: 10px;
-
-      &:hover {
-        box-shadow: none;
-      }
-
-      &:active {
-        color: var(--primary-dark);
-        background-color: var(--primary-light);
-        border-style: dashed;
-        box-shadow: none;
-      }
-    }  
     
   }
 
@@ -125,6 +174,7 @@ export default function ProfileBanner() {
 
   return (
     <ProfileBannerStyles>
+      <Logo className="logo" />
       <div className="profileLinks">
         {socialLinks.nodes.map((socialLink) => (
           <Button key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url} aria-label={socialLink.name}>

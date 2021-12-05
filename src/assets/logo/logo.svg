@@ -1,0 +1,10 @@
+<svg viewBox="0 0 5334 5334" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2">
+  <rect x="10" y="450" width="400" height="400" transform="matrix(-4.16667 0 0 4.16667 1708.3347 -41.6667)" id="middle-left" />
+  <rect x="890" y="450" width="400" height="400" transform="matrix(-4.16667 0 0 4.16667 9041.6739 -41.6667)" id="middle-right" />
+  <rect x="450" y="890" width="400" height="400" transform="matrix(-4.16667 0 0 4.16667 5375.0043 -3708.3363)" id="top-middle" />
+  <rect x="450" y="450" width="400" height="400" transform="matrix(-4.16667 0 0 4.16667 5375.0043 -41.6667)" id="middle-middle" />
+  <path d="M0-400c-110.457 0-200 89.543-200 200V0h400v-400H0Z" style="fill-rule:nonzero" transform="translate(833.334 1666.668) scale(4.16667)" id="top-left" />
+  <path d="M0 0c0-110.457-89.543-200-200-200h-200v400H0V0Z" style="fill-rule:nonzero" transform="translate(5333.3376 833.334) scale(4.16667)" id="top-right" />
+  <path d="M0-400v200C0-89.543 89.543 0 200 0s200-89.543 200-200v-200H0Z" style="fill-rule:nonzero" transform="translate(0 5333.3376) scale(4.16667)" id="bottom-left" />
+  <path d="M0-400v200C0-89.543 89.543 0 200 0s200-89.543 200-200v-200H0Z" style="fill-rule:nonzero" transform="translate(3666.6696 5333.3376) scale(4.16667)" id="bottom-right" />
+</svg>
