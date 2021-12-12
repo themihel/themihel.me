@@ -8,7 +8,6 @@ export default function StaticPage({ data: { staticPage } }) {
   return (
     <>
       <SEO title={staticPage.title} />
-
       <ContentContainer>
         <h1>{staticPage.title}</h1>
         <BlockContent blocks={staticPage._rawContent} ignoreUnknownTypes />

@@ -3,7 +3,6 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions }) => {
   console.info('[CreateStaticPages] Start creating static pages');
 
-  const { createPage } = actions;
   const staticPageTemplate = path.resolve('./src/templates/StaticPage.js');
   const { data } = await graphql(`
     query {
@@ -20,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   data.staticPages.nodes.forEach((staticPage) => {
-    createPage({
+    actions.createPage({
       path: `${staticPage.slug.current}`,
       component: staticPageTemplate,
       context: {
