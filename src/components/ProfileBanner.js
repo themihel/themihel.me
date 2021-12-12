@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { device } from '../utils/device';
 import Button from './Button';
-import Logo from '../assets/logo/logo.svg';
+import Logo from './Logo';
 
 const ProfileBannerStyles = styled.div`
   height: 100vh;
@@ -15,64 +15,6 @@ const ProfileBannerStyles = styled.div`
   background-size: 130% 130%;
   background-position-x: 30%;
   animation: degrees 7s 1;
-
-
-  .logo {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-
-    width: 30px;
-    fill: var(--primary-light);
-    transition: all .3s ease-in-out;
-
-    @media ${device.screenMdMin} {
-      width: 40px;
-    }
-
-    &:hover {
-      #top-left {
-        animation: changecolor 3s infinite .2s;
-      }
-
-      #top-middle {
-        animation: changecolor 5s infinite 1s;
-      }
-
-      #top-right {
-        animation: changecolor 1.3s infinite .8s;
-      }
-
-      #middle-left {
-        animation: changecolor 2s infinite .1s;
-      }
-
-      #middle-middle {
-        animation: changecolor 1s infinite .7s;
-      }
-
-      #middle-right {
-        animation: changecolor .8s infinite 2s;
-      }
-
-      #bottom-left {
-        animation: changecolor 1.3s infinite;
-      }
-
-      #bottom-right {
-        animation: changecolor .7s infinite .8s;
-      }
-    }
-  }
-
-  @keyframes changecolor {
-   from {
-     fill: var(--primary-light);
-    }
-   to {
-    fill: var(--primary-dark);
-    }
-  }
 
   @keyframes degrees {
     0% {
@@ -174,7 +116,7 @@ export default function ProfileBanner() {
 
   return (
     <ProfileBannerStyles>
-      <Logo className="logo" />
+      <Logo />
       <div className="profileLinks">
         {socialLinks.nodes.map((socialLink) => (
           <Button key={socialLink.id} target="_blank" rel="noopener noreferrer" href={socialLink.url} aria-label={socialLink.name}>
