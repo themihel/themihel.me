@@ -92,7 +92,7 @@ const ProfileBannerStyles = styled.div`
 `;
 
 export default function ProfileBanner() {
-  const { socialLinks, profileImages } = useStaticQuery(graphql`
+  const { socialLinks, frontpageSettingsNodes } = useStaticQuery(graphql`
     query {
       socialLinks: allSanitySocialLinks(filter: {visible: {eq: true}}) {
         nodes {
@@ -102,17 +102,20 @@ export default function ProfileBanner() {
           icon
         }
       },
-      profileImages: allFile(filter: {name: {eq: "profilePhoto"}}) {
+      frontpageSettingsNodes: allSanityFrontpageSettings {
         nodes {
-          name
-          childImageSharp {
-            gatsbyImageData(width: 300)
+          profileCoverTitle
+          profileCoverSubTitle
+          profileCoverPhoto {
+            asset {
+              gatsbyImageData
+            }
           }
         }
       }
     }
   `);
-  const profileImage = profileImages.nodes[0];
+  const frontpageSettings = frontpageSettingsNodes.nodes[0];
 
   return (
     <ProfileBannerStyles>
@@ -127,13 +130,13 @@ export default function ProfileBanner() {
       <div className="profilePhoto">
         <GatsbyImage
           className="gatsbyImage"
-          image={profileImage.childImageSharp.gatsbyImageData}
+          image={frontpageSettings.profileCoverPhoto.asset.gatsbyImageData}
           alt="Mischa Helfenstein"
         />
       </div>
       <div className="profileText">
-        <h1>Mischa Helfenstein</h1>
-        <h2>Student | Developer</h2>
+        <h1>{frontpageSettings.profileCoverTitle}</h1>
+        <h2>{frontpageSettings.profileCoverSubTitle}</h2>
       </div>
     </ProfileBannerStyles>
   );
