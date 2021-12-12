@@ -11,22 +11,24 @@ export default function IndexPage() {
     query {
       frontpageSettingsNodes: allSanityFrontpageSettings {
         nodes {
-          title
-          description
-          themeColor
+          seo {
+            title
+            description
+            themeColor
+          }
         }
       }
     }
   `);
 
-  const frontpageSettings = frontpageSettingsNodes.nodes[0];
+  const frontpageSEOSettings = frontpageSettingsNodes.nodes[0].seo;
 
   return (
     <>
       <SEO
-        title={frontpageSettings.title}
-        themeColor={frontpageSettings.themeColor}
-        description={frontpageSettings.description}
+        title={frontpageSEOSettings.title}
+        themeColor={frontpageSEOSettings.themeColor}
+        description={frontpageSEOSettings.description}
       />
       <ProfileBanner />
       <ContentContainer>
