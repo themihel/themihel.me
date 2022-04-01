@@ -6,6 +6,7 @@ module.exports = {
     title: 'themihel.me',
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
