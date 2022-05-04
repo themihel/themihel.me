@@ -132,6 +132,9 @@ export default function ProfileBanner() {
           className="gatsbyImage"
           image={frontpageSettings.profileCoverPhoto.asset.gatsbyImageData}
           alt="Mischa Helfenstein"
+          imgStyle={{
+            borderRadius: '100%',
+          }}
         />
       </div>
       <div className="profileText">
