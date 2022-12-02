@@ -38,6 +38,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-simple-analytics',
+      options: {
+        trackPageViews: true,
+        events: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'themihel.me | Mischa Helfenstein',
