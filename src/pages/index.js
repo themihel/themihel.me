@@ -14,7 +14,9 @@ export default function IndexPage() {
           seo {
             title
             description
-            themeColor
+            themeColor {
+              hex
+            }
           }
         }
       }
@@ -27,7 +29,7 @@ export default function IndexPage() {
     <>
       <SEO
         title={frontpageSEOSettings.title}
-        themeColor={frontpageSEOSettings.themeColor}
+        themeColor={frontpageSEOSettings.themeColor.hex}
         description={frontpageSEOSettings.description}
       />
       <ProfileBanner />
